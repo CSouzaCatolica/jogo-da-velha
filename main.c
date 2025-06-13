@@ -49,6 +49,7 @@ void sep() {
 }
 // ##################################################################################################
 void welcome() {
+    system("cls");
     sep();
     printf("[1]    - Iniciar o jogo\n");
     printf("[sair] - Sair\n");
@@ -63,6 +64,7 @@ GameResult runGame() {
     int moveCount = 0;
     int move;
 
+    system("cls");
     printf("\n--- Jogo Iniciado! ---\n");
     printf("Jogador 1: X | Jogador 2: O\n");
 
@@ -89,6 +91,8 @@ GameResult runGame() {
         moveCount++;
 
         int winner = checaVitoria(movimentos);
+        system("cls");
+        sep();
         if (winner != 0) {
             resultado.status = 1;
             resultado.winner = winner;
